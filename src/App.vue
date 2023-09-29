@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>{{ checked }}</p>
+    <FieldWrapper v-model="checked" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FieldWrapper from './components/FieldWrapper.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FieldWrapper,
+  },
+  data() {
+    return {
+      checked: false,
+    }
   }
 }
 </script>
